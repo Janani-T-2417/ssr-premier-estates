@@ -116,7 +116,7 @@ function VenturePage() {
                   <Sparkles className="h-5 w-5" /> <span className="text-sm tracking-[0.25em] uppercase">Project Highlights</span>
                 </div>
                 <ul className="grid gap-3 sm:grid-cols-2">
-                  {v.highlights.map((h) => (
+                  {v.highlights.map((h: string) => (
                     <li key={h} className="flex items-start gap-2 text-sm text-white/85">
                       <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-[#D4AF37]" />
                       <span>{h}</span>
@@ -138,7 +138,7 @@ function VenturePage() {
               </h2>
             </Reveal>
             <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
-              {v.amenities.map((a) => (
+              {v.amenities.map((a: string) => (
                 <div key={a} className="rounded-2xl glass gold-border px-4 py-4 text-center text-sm text-white/85">{a}</div>
               ))}
             </div>
