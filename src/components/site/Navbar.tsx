@@ -1,21 +1,23 @@
 import { useEffect, useState } from "react";
-import { Link } from "@tanstack/react-router";
+import { Link, useLocation } from "@tanstack/react-router";
 import { Menu, X, Phone } from "lucide-react";
 import logo from "@/assets/ssr-logo.asset.json";
 import { COMPANY } from "@/lib/site-data";
 
 const links = [
-  { href: "/#about", label: "About" },
-  { href: "/#chairman", label: "Chairman" },
-  { href: "/#ventures", label: "Ventures" },
-  { href: "/#amenities", label: "Amenities" },
-  { href: "/#gallery", label: "Gallery" },
-  { href: "/#contact", label: "Contact" },
-];
+  { to: "/", label: "Home" },
+  { to: "/about", label: "About" },
+  { to: "/chairman", label: "Chairman" },
+  { to: "/ventures", label: "Ventures" },
+  { to: "/amenities", label: "Amenities" },
+  { to: "/gallery", label: "Gallery" },
+  { to: "/contact", label: "Contact" },
+] as const;
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const { pathname } = useLocation();
 
   useEffect(() => {
     const on = () => setScrolled(window.scrollY > 20);
@@ -23,6 +25,8 @@ export function Navbar() {
     window.addEventListener("scroll", on, { passive: true });
     return () => window.removeEventListener("scroll", on);
   }, []);
+
+  useEffect(() => { setOpen(false); }, [pathname]);
 
   return (
     <header
@@ -56,13 +60,16 @@ export function Navbar() {
 
           <nav className="hidden items-center gap-1 lg:flex">
             {links.map((l) => (
-              <a
-                key={l.href}
-                href={l.href}
-                className="rounded-full px-3 py-2 text-sm text-white/80 transition hover:text-[#F4D67A]"
+              <Link
+                key={l.to}
+                to={l.to}
+                activeOptions={{ exact: true }}
+                activeProps={{ className: "text-[#F4D67A]" }}
+                inactiveProps={{ className: "text-white/80 hover:text-[#F4D67A]" }}
+                className="rounded-full px-3 py-2 text-sm transition"
               >
                 {l.label}
-              </a>
+              </Link>
             ))}
             <a
               href={`tel:${COMPANY.phone}`}
@@ -85,14 +92,15 @@ export function Navbar() {
           <div className="mt-2 rounded-2xl glass gold-border p-4 lg:hidden">
             <nav className="flex flex-col gap-1">
               {links.map((l) => (
-                <a
-                  key={l.href}
-                  href={l.href}
-                  onClick={() => setOpen(false)}
+                <Link
+                  key={l.to}
+                  to={l.to}
+                  activeOptions={{ exact: true }}
+                  activeProps={{ className: "text-[#F4D67A]" }}
                   className="rounded-lg px-3 py-2 text-sm text-white/85 hover:bg-white/5"
                 >
                   {l.label}
-                </a>
+                </Link>
               ))}
               <a
                 href={`tel:${COMPANY.phone}`}

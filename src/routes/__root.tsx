@@ -12,6 +12,7 @@ import { useEffect, type ReactNode } from "react";
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import logo from "@/assets/ssr-logo.asset.json";
+import { FloatingWhatsApp } from "@/components/site/FloatingWhatsApp";
 
 function NotFoundComponent() {
   return (
@@ -112,6 +113,7 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       <Outlet />
+      <FloatingWhatsApp />
     </QueryClientProvider>
   );
 }
