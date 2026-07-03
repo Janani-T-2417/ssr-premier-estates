@@ -1,4 +1,5 @@
-import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+import { Link, useParams } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { ArrowLeft, CalendarDays, MapPin, Download, MessageCircle, CheckCircle2, Sparkles, Map, Compass, Building2 } from "lucide-react";
 import { PageShell } from "@/components/site/PageShell";
 import { Reveal } from "@/components/site/Reveal";
@@ -20,43 +21,34 @@ const advantages = [
   { icon: Sparkles, title: "Lifestyle Landmarks", body: "Shopping, dining and healthcare precincts in close proximity." },
 ];
 
-export const Route = createFileRoute("/ventures/$slug")({
-  loader: ({ params }) => {
-    const v = getVenture(params.slug);
-    if (!v) throw notFound();
-    return v;
-  },
-  head: ({ loaderData }) => ({
-    meta: loaderData
-      ? [
-          { title: `${loaderData.name} — SSR GROUP` },
-          { name: "description", content: loaderData.tagline },
-          { property: "og:title", content: `${loaderData.name} — SSR GROUP` },
-          { property: "og:description", content: loaderData.tagline },
-          { property: "og:image", content: loaderData.image },
-          { property: "og:type", content: "article" },
-        ]
-      : [],
-  }),
-  component: VenturePage,
-  notFoundComponent: () => (
-    <div className="grid min-h-dvh place-items-center px-4">
-      <div className="glass gold-border rounded-2xl p-10 text-center">
-        <h1 className="font-display text-3xl text-gold-gradient">Venture not found</h1>
-        <Link to="/" className="mt-4 inline-block rounded-full bg-gold-gradient px-5 py-2 text-sm font-semibold text-[#081826]">Go home</Link>
-      </div>
-    </div>
-  ),
-});
+export default function VenturePage() {
+  const { slug } = useParams();
+  const v = getVenture(slug as string);
 
-function VenturePage() {
-  const v = Route.useLoaderData();
+  if (!v) {
+    return (
+      <div className="grid min-h-dvh place-items-center px-4">
+        <div className="glass gold-border rounded-2xl p-10 text-center">
+          <h1 className="font-display text-3xl text-gold-gradient">Venture not found</h1>
+          <Link to="/" className="mt-4 inline-block rounded-full bg-gold-gradient px-5 py-2 text-sm font-semibold text-[#081826]">Go home</Link>
+        </div>
+      </div>
+    );
+  }
   const wa = buildWhatsAppUrl(`Hello SSR GROUP, I'm interested in ${v.name}. Please share more details.`);
   const others = VENTURES.filter((x) => x.slug !== v.slug);
   const mapQuery = encodeURIComponent(`${v.name}, ${v.location}`);
 
   return (
     <PageShell>
+      <Helmet>
+        <title>{v.name} — SSR GROUP</title>
+        <meta name="description" content={v.tagline} />
+        <meta property="og:title" content={`${v.name} — SSR GROUP`} />
+        <meta property="og:description" content={v.tagline} />
+        <meta property="og:image" content={v.image} />
+        <meta property="og:type" content="article" />
+      </Helmet>
       {/* Cinematic Hero */}
       <section className="relative isolate overflow-hidden pt-8 pb-20">
         <div className="absolute inset-0 -z-10">
@@ -257,7 +249,7 @@ function VenturePage() {
           </Reveal>
           <div className="mt-8 grid gap-6 md:grid-cols-3">
             {others.map((o) => (
-              <Link key={o.slug} to="/ventures/$slug" params={{ slug: o.slug }} className="group overflow-hidden rounded-2xl glass gold-border hover-lift">
+              <Link key={o.slug} to={`/ventures/${o.slug}`} className="group overflow-hidden rounded-2xl glass gold-border hover-lift">
                 <div className="aspect-[16/10] overflow-hidden">
                   <img src={o.image} alt={o.name} loading="lazy" className="h-full w-full object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-110" />
                 </div>

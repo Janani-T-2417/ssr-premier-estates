@@ -1,21 +1,21 @@
 import { Reveal } from "./Reveal";
-import chairman from "@/assets/chairman.asset.json";
+import chairman from "@/assets/chairman.jpg";
 import { Quote } from "lucide-react";
 
 export function Chairman() {
   return (
     <section id="chairman" className="section-y relative">
       <div className="mx-auto grid max-w-7xl gap-14 px-4 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:items-center">
-        <Reveal className="relative mx-auto w-full max-w-md">
-          <div className="pointer-events-none absolute -inset-6 rounded-[2rem] bg-[radial-gradient(circle_at_50%_20%,rgba(212,175,55,0.35),transparent_60%)] blur-2xl" />
-          <div className="relative overflow-hidden rounded-[2rem] gold-border">
+        <Reveal className="relative mx-auto w-full">
+          <div className="pointer-events-none absolute -inset-6 rounded-3xl bg-[radial-gradient(circle_at_50%_20%,rgba(212,175,55,0.35),transparent_60%)] blur-2xl" />
+          <div className="relative overflow-hidden rounded-3xl gold-border gold-glow w-full max-w-[450px] sm:max-w-[380px] md:max-w-[420px] lg:max-w-[450px] mx-auto shadow-xl group transition-transform duration-500">
             <img
-              src={chairman.url}
+              src={chairman}
               alt="Chairman, SSR Group"
-              width={800}
-              height={1000}
+              width={450}
+              height={550}
               loading="lazy"
-              className="aspect-[4/5] w-full object-cover"
+              className="w-full h-auto aspect-[9/11] object-cover transition-transform duration-700 ease-out group-hover:scale-105"
             />
             <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#050f1a] via-[#050f1a]/60 to-transparent p-6">
               <div className="font-display text-2xl text-gold-gradient">Sri Siva Raghava</div>

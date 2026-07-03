@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
 import { Reveal } from "./Reveal";
 import { VENTURES } from "@/lib/site-data";
 import { MapPin, CalendarDays, ArrowUpRight, Download } from "lucide-react";
@@ -64,8 +64,7 @@ export function Ventures() {
 
                   <div className="mt-6 flex flex-wrap items-center gap-3">
                     <Link
-                      to="/ventures/$slug"
-                      params={{ slug: v.slug }}
+                      to={`/ventures/${v.slug}`}
                       className="inline-flex items-center gap-1.5 rounded-full bg-gold-gradient px-5 py-2 text-sm font-semibold text-[#081826] transition hover:scale-[1.03]"
                     >
                       Read More <ArrowUpRight className="h-4 w-4" />

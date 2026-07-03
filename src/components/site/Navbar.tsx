@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { Link, useLocation } from "@tanstack/react-router";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { Menu, X, Phone } from "lucide-react";
-import logo from "@/assets/ssr-logo.asset.json";
+import logo from "@/assets/ssr-logo.jpg";
 import { COMPANY } from "@/lib/site-data";
 
 const links = [
@@ -42,7 +42,7 @@ export function Navbar() {
         >
           <Link to="/" className="flex min-w-0 items-center gap-3">
             <img
-              src={logo.url}
+              src={logo}
               alt="SSR Group"
               width={44}
               height={44}
@@ -60,16 +60,18 @@ export function Navbar() {
 
           <nav className="hidden items-center gap-1 lg:flex">
             {links.map((l) => (
-              <Link
+              <NavLink
                 key={l.to}
                 to={l.to}
-                activeOptions={{ exact: true }}
-                activeProps={{ className: "text-[#F4D67A]" }}
-                inactiveProps={{ className: "text-white/80 hover:text-[#F4D67A]" }}
-                className="rounded-full px-3 py-2 text-sm transition"
+                end
+                className={({ isActive }) =>
+                  `rounded-full px-3 py-2 text-sm transition ${
+                    isActive ? "text-[#F4D67A]" : "text-white/80 hover:text-[#F4D67A]"
+                  }`
+                }
               >
                 {l.label}
-              </Link>
+              </NavLink>
             ))}
             <a
               href={`tel:${COMPANY.phone}`}
@@ -92,15 +94,18 @@ export function Navbar() {
           <div className="mt-2 rounded-2xl glass gold-border p-4 lg:hidden">
             <nav className="flex flex-col gap-1">
               {links.map((l) => (
-                <Link
+                <NavLink
                   key={l.to}
                   to={l.to}
-                  activeOptions={{ exact: true }}
-                  activeProps={{ className: "text-[#F4D67A]" }}
-                  className="rounded-lg px-3 py-2 text-sm text-white/85 hover:bg-white/5"
+                  end
+                  className={({ isActive }) =>
+                    `rounded-lg px-3 py-2 text-sm ${
+                      isActive ? "text-[#F4D67A]" : "text-white/85 hover:bg-white/5"
+                    }`
+                  }
                 >
                   {l.label}
-                </Link>
+                </NavLink>
               ))}
               <a
                 href={`tel:${COMPANY.phone}`}

@@ -1,6 +1,6 @@
-import { Link } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
 import { Instagram, Phone, Mail, MapPin } from "lucide-react";
-import logo from "@/assets/ssr-logo.asset.json";
+import logo from "@/assets/ssr-logo.jpg";
 import { COMPANY, VENTURES } from "@/lib/site-data";
 
 export function Footer() {
@@ -10,7 +10,7 @@ export function Footer() {
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-16 md:grid-cols-4">
         <div className="md:col-span-2">
           <div className="flex items-center gap-3">
-            <img src={logo.url} alt="SSR Group" width={56} height={56} className="h-14 w-14 rounded-full ring-1 ring-[#D4AF37]/60" />
+            <img src={logo} alt="SSR Group" width={56} height={56} className="h-14 w-14 rounded-full ring-1 ring-[#D4AF37]/60" />
             <div>
               <div className="font-display text-2xl font-bold text-gold-gradient">SSR GROUP</div>
               <div className="text-xs tracking-[0.25em] text-muted-foreground">YOUR DREAMS COMES TRUE WITH US</div>

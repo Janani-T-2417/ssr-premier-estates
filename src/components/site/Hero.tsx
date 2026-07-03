@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowDown, Building2, Home, MapPin, Users, Phone, MessageCircle } from "lucide-react";
 import heroImg from "@/assets/hero-drone.jpg";
-import logo from "@/assets/ssr-logo.asset.json";
+import logo from "@/assets/ssr-logo.jpg";
 import { COMPANY, buildWhatsAppUrl } from "@/lib/site-data";
 
 const stats = [
@@ -59,8 +59,8 @@ export function Hero() {
           transition={{ duration: 1.2, ease: [0.2, 0.8, 0.2, 1] }}
           className="mx-auto"
         >
-          <div className="relative mx-auto grid h-28 w-28 place-items-center rounded-full glass gold-border sm:h-32 sm:w-32">
-            <img src={logo.url} alt="SSR Group" width={112} height={112} className="h-24 w-24 rounded-full object-cover sm:h-28 sm:w-28" />
+            <div className="relative mx-auto grid h-28 w-28 place-items-center rounded-full glass gold-border sm:h-32 sm:w-32">
+            <img src={logo} alt="SSR Group" width={112} height={112} className="h-24 w-24 rounded-full object-cover sm:h-28 sm:w-28" />
             <div className="pointer-events-none absolute -inset-3 rounded-full border border-[#D4AF37]/40 [mask:linear-gradient(black,transparent)]" />
           </div>
         </motion.div>
