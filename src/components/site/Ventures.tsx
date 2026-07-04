@@ -4,9 +4,11 @@ import { VENTURES } from "@/lib/site-data";
 import { MapPin, CalendarDays, ArrowUpRight, Download } from "lucide-react";
 
 const statusColor: Record<string, string> = {
-  Completed: "bg-emerald-400/15 text-emerald-300 border-emerald-400/30",
-  Ongoing: "bg-amber-400/15 text-amber-300 border-amber-400/30",
-  Upcoming: "bg-fuchsia-400/15 text-fuchsia-300 border-fuchsia-400/30",
+  "Completed": "bg-emerald-400/15 text-emerald-300 border-emerald-400/30",
+  "Fully Completed": "bg-emerald-400/15 text-emerald-300 border-emerald-400/30",
+  "Ongoing Project": "bg-amber-400/15 text-amber-300 border-amber-400/30",
+  "Upcoming": "bg-fuchsia-400/15 text-fuchsia-300 border-fuchsia-400/30",
+  "Few Plots Available": "bg-rose-400/15 text-rose-300 border-rose-400/30",
 };
 
 export function Ventures() {
