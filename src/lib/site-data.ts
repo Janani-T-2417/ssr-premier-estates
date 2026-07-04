@@ -4,12 +4,12 @@ import ventureNunnaImg from "@/assets/venture-nunna.jpg";
 import ventureKankipaduImg from "@/assets/venture-kankipadu.jpg";
 import ventureVuyyuruImg from "@/assets/venture-vuyyuru.jpg";
 import venturePenamaluruImg from "@/assets/venture-penamaluru.jpg";
-import ventureRamarapaduImg from "@/assets/venture-ramarapadu.jpg";
+import ventureRamavarapaduImg from "@/assets/venture-ramarapadu.jpg";
 import videoNunna from "@/assets/video-nunna.asset.json";
 import videoKankipadu from "@/assets/video-kankipadu.asset.json";
 import videoVuyyuru from "@/assets/video-vuyyuru.asset.json";
 import videoPenamaluru from "@/assets/video-penamaluru.asset.json";
-import videoRamarapadu from "@/assets/video-ramarapadu.asset.json";
+import videoRamavarapadu from "@/assets/video-ramarapadu.asset.json";
 
 export const COMPANY = {
   name: "SRR GROUP",
