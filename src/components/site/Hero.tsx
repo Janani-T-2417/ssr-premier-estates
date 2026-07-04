@@ -14,7 +14,7 @@ const stats = [
 const particles = Array.from({ length: 18 });
 
 export function Hero() {
-  const wa = buildWhatsAppUrl("Hello SSR GROUP, I'd like to know more about your ventures.");
+  const wa = buildWhatsAppUrl("Hello SRR GROUP, I'd like to know more about your ventures.");
   return (
     <section className="relative isolate flex min-h-dvh items-center overflow-hidden pt-24">
       {/* Cinematic background */}
@@ -60,7 +60,7 @@ export function Hero() {
           className="mx-auto"
         >
             <div className="relative mx-auto grid h-28 w-28 place-items-center rounded-full glass gold-border sm:h-32 sm:w-32">
-            <img src={logo} alt="SSR Group" width={112} height={112} className="h-24 w-24 rounded-full object-cover sm:h-28 sm:w-28" />
+            <img src={logo} alt="SRR Group" width={112} height={112} className="h-24 w-24 rounded-full object-cover sm:h-28 sm:w-28" />
             <div className="pointer-events-none absolute -inset-3 rounded-full border border-[#D4AF37]/40 [mask:linear-gradient(black,transparent)]" />
           </div>
         </motion.div>
@@ -81,7 +81,7 @@ export function Hero() {
             transition={{ delay: 0.5, duration: 1 }}
             className="mt-4 font-display text-5xl leading-[1.05] sm:text-7xl md:text-8xl"
           >
-            <span className="text-gold-gradient">SSR </span>
+            <span className="text-gold-gradient">SRR </span>
             <span className="text-white">GROUP</span>
           </motion.h1>
 

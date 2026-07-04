@@ -35,16 +35,16 @@ export default function VenturePage() {
       </div>
     );
   }
-  const wa = buildWhatsAppUrl(`Hello SSR GROUP, I'm interested in ${v.name}. Please share more details.`);
+  const wa = buildWhatsAppUrl(`Hello SRR GROUP, I'm interested in ${v.name}. Please share more details.`);
   const others = VENTURES.filter((x) => x.slug !== v.slug);
   const mapQuery = encodeURIComponent(`${v.name}, ${v.location}`);
 
   return (
     <PageShell>
       <Helmet>
-        <title>{v.name} — SSR GROUP</title>
+        <title>{v.name} — SRR GROUP</title>
         <meta name="description" content={v.tagline} />
-        <meta property="og:title" content={`${v.name} — SSR GROUP`} />
+        <meta property="og:title" content={`${v.name} — SRR GROUP`} />
         <meta property="og:description" content={v.tagline} />
         <meta property="og:image" content={v.image} />
         <meta property="og:type" content="article" />
@@ -245,7 +245,7 @@ export default function VenturePage() {
         <div className="mx-auto max-w-7xl px-4">
           <Reveal>
             <p className="text-[11px] tracking-[0.4em] text-[#F4D67A]/80">EXPLORE MORE</p>
-            <h2 className="mt-3 font-display text-3xl sm:text-4xl md:text-5xl">Other <span className="text-gold-gradient">SSR ventures.</span></h2>
+            <h2 className="mt-3 font-display text-3xl sm:text-4xl md:text-5xl">Other <span className="text-gold-gradient">SRR ventures.</span></h2>
           </Reveal>
           <div className="mt-8 grid gap-6 md:grid-cols-3">
             {others.map((o) => (

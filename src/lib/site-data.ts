@@ -6,7 +6,7 @@ import ventureVuyyuruImg from "@/assets/venture-vuyyuru.jpg";
 import venturePenamaluruImg from "@/assets/venture-penamaluru.jpg";
 
 export const COMPANY = {
-  name: "SSR GROUP",
+  name: "SRR GROUP",
   tagline: "YOUR DREAMS COMES TRUE WITH US",
   phone: "9491103142",
   phoneDisplay: "+91 94911 03142",
@@ -42,7 +42,7 @@ export type Venture = {
 export const VENTURES: Venture[] = [
   {
     slug: "nunna",
-    name: "SSR Nunna",
+    name: "SRR Nunna",
     subtitle: "Premium Plots & Luxury Homes",
     status: "Completed",
     launch: "03 April 2022",
@@ -124,12 +124,12 @@ export const VENTURES: Venture[] = [
   },
   {
     slug: "penamaluru",
-    name: "SSR Penamaluru",
+    name: "SRR Penamaluru",
     subtitle: "Coming Soon — Future Landmark",
     status: "Upcoming",
     location: "Penamaluru, Vijayawada",
     image: venturePenamaluruImg,
-    tagline: "The next SSR landmark — a future investment opportunity.",
+    tagline: "The next SRR landmark — a future investment opportunity.",
     overview:
       "An upcoming flagship community at Penamaluru. Register your interest early to secure priority allotment and pre-launch pricing on our most anticipated venture yet.",
     highlights: [

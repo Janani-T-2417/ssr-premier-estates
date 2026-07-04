@@ -43,14 +43,14 @@ export function Navbar() {
           <Link to="/" className="flex min-w-0 items-center gap-3">
             <img
               src={logo}
-              alt="SSR Group"
+              alt="SRR Group"
               width={44}
               height={44}
               className="h-11 w-11 shrink-0 rounded-full object-cover ring-1 ring-[#D4AF37]/60"
             />
             <div className="min-w-0">
               <div className="truncate font-display text-lg font-bold tracking-wide text-gold-gradient sm:text-xl">
-                SSR GROUP
+                SRR GROUP
               </div>
               <div className="hidden text-[10px] tracking-[0.25em] text-muted-foreground sm:block">
                 YOUR DREAMS COMES TRUE WITH US

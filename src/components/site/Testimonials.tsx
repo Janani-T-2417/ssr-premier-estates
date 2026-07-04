@@ -5,9 +5,9 @@ import { Quote, ChevronLeft, ChevronRight, Star } from "lucide-react";
 const items = [
   {
     name: "Ramesh & Family",
-    venture: "SSR Nunna",
+    venture: "SRR Nunna",
     quote:
-      "Our home at SSR Nunna is beyond what we imagined. Wide roads, secure gates and world-class amenities — truly a dream community.",
+      "Our home at SRR Nunna is beyond what we imagined. Wide roads, secure gates and world-class amenities — truly a dream community.",
   },
   {
     name: "Priya Krishnan",
@@ -17,9 +17,9 @@ const items = [
   },
   {
     name: "Dr. Ananth Rao",
-    venture: "SSR Nunna",
+    venture: "SRR Nunna",
     quote:
-      "Transparent process, timely delivery and premium quality. SSR Group has genuinely raised the bar for real estate in Vijayawada.",
+      "Transparent process, timely delivery and premium quality. SRR Group has genuinely raised the bar for real estate in Vijayawada.",
   },
 ];
 

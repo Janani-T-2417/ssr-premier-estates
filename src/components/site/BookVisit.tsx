@@ -18,7 +18,7 @@ export function BookVisit() {
 
   const submit = (e: React.FormEvent) => {
     e.preventDefault();
-    const msg = `Hello SSR GROUP,
+    const msg = `Hello SRR GROUP,
 
 Name: ${form.name}
 Phone: ${form.phone}

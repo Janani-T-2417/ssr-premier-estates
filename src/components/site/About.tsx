@@ -19,7 +19,7 @@ export function About() {
           <div className="relative overflow-hidden rounded-3xl gold-border">
             <img
               src={galleryImg}
-              alt="SSR Group luxury community boulevard"
+              alt="SRR Group luxury community boulevard"
               width={1280}
               height={896}
               loading="lazy"
@@ -35,15 +35,15 @@ export function About() {
 
         <div className="order-1 lg:order-2">
           <Reveal>
-            <p className="text-[11px] tracking-[0.4em] text-[#F4D67A]/80">ABOUT SSR GROUP</p>
+            <p className="text-[11px] tracking-[0.4em] text-[#F4D67A]/80">ABOUT SRR GROUP</p>
             <h2 className="mt-3 font-display text-4xl leading-tight sm:text-5xl md:text-6xl">
               A legacy of <span className="text-gold-gradient">luxury living,</span> engineered for generations.
             </h2>
             <p className="mt-5 max-w-xl text-white/75">
-              SSR Group is a premium real estate developer headquartered in
+              SRR Group is a premium real estate developer headquartered in
               Vijayawada, dedicated to creating master-planned luxury
               communities that combine cinematic architecture, world-class
-              amenities and prime connectivity. Every SSR address is a promise
+              amenities and prime connectivity. Every SRR address is a promise
               of quality, trust and enduring value.
             </p>
           </Reveal>
