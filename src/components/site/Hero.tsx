@@ -5,7 +5,7 @@ import logo from "@/assets/ssr-logo.jpg";
 import { COMPANY, buildWhatsAppUrl } from "@/lib/site-data";
 
 const stats = [
-  { icon: Building2, value: "4", label: "Premium Ventures" },
+  { icon: Building2, value: "5", label: "Premium Ventures" },
   { icon: Users, value: "1000+", label: "Happy Families" },
   { icon: Home, value: "500+", label: "Luxury Homes" },
   { icon: MapPin, value: "1000+", label: "Premium Plots" },
