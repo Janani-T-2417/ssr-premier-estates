@@ -63,9 +63,16 @@ export default function VenturePage() {
 
           <div className="mt-6 grid gap-8 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] lg:items-end">
             <div>
-              <span className="inline-block rounded-full glass gold-border px-3 py-1 text-[10px] tracking-[0.3em] text-[#F4D67A] uppercase">
-                {v.status}
-              </span>
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="inline-block rounded-full glass gold-border px-3 py-1 text-[10px] tracking-[0.3em] text-[#F4D67A] uppercase">
+                  {v.status}
+                </span>
+                {v.availability && (
+                  <span className="inline-block rounded-full border border-[#D4AF37]/50 bg-[#D4AF37]/15 px-3 py-1 text-[10px] tracking-[0.3em] text-[#F4D67A] uppercase">
+                    {v.availability}
+                  </span>
+                )}
+              </div>
               <h1 className="mt-4 font-display text-5xl leading-[1.05] sm:text-6xl md:text-7xl">
                 <span className="text-gold-gradient">{v.name.split(" — ")[0]}</span>
                 {v.name.includes(" — ") && <span className="block text-white/95">{v.name.split(" — ")[1]}</span>}
