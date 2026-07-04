@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { ArrowLeft, CalendarDays, MapPin, Download, MessageCircle, CheckCircle2, Sparkles, Map, Compass, Building2 } from "lucide-react";
@@ -24,6 +25,11 @@ const advantages = [
 export default function VenturePage() {
   const { slug } = useParams();
   const v = getVenture(slug as string);
+  const [videoHasErrored, setVideoHasErrored] = useState(false);
+
+  useEffect(() => {
+    setVideoHasErrored(false);
+  }, [slug]);
 
   if (!v) {
     return (
@@ -128,17 +134,22 @@ export default function VenturePage() {
             </Reveal>
             <Reveal delay={0.1}>
               <div className="relative overflow-hidden rounded-3xl gold-border shadow-[0_30px_80px_-30px_rgba(212,175,55,0.35)]">
-                <video
-                  key={v.slug}
-                  src={v.videoUrl}
-                  poster={v.image}
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  preload="metadata"
-                  className="aspect-video h-full w-full object-cover animate-in fade-in duration-1000"
-                />
+                {!videoHasErrored ? (
+                  <video
+                    key={v.slug}
+                    src={v.videoUrl}
+                    poster={v.image}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    preload="auto"
+                    onError={() => setVideoHasErrored(true)}
+                    className="aspect-video h-full w-full object-cover animate-in fade-in duration-1000"
+                  />
+                ) : (
+                  <img src={v.image} alt={`${v.name} hero image`} className="aspect-video h-full w-full object-cover animate-in fade-in duration-1000" />
+                )}
                 <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#050f1a]/50 via-transparent to-[#050f1a]/20" />
               </div>
             </Reveal>

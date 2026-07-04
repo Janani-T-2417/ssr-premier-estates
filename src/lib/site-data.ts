@@ -5,11 +5,6 @@ import ventureKankipaduImg from "@/assets/venture-kankipadu.jpg";
 import ventureVuyyuruImg from "@/assets/venture-vuyyuru.jpg";
 import venturePenamaluruImg from "@/assets/venture-penamaluru.jpg";
 import ventureRamavarapaduImg from "@/assets/venture-ramarapadu.jpg";
-import videoNunna from "@/assets/video-nunna.asset.json";
-import videoKankipadu from "@/assets/video-kankipadu.asset.json";
-import videoVuyyuru from "@/assets/video-vuyyuru.asset.json";
-import videoPenamaluru from "@/assets/video-penamaluru.asset.json";
-import videoRamavarapadu from "@/assets/video-ramarapadu.asset.json";
 
 export const COMPANY = {
   name: "SRR GROUP",
@@ -62,7 +57,7 @@ export const VENTURES: Venture[] = [
     launch: "03 April 2022",
     location: "Nunna, Vijayawada",
     image: ventureNunnaImg,
-    videoUrl: videoNunna.url,
+    videoUrl: "/videos/nunna.mp4",
     brochureUrl: brochureNunna.url,
     tagline: "350+ premium plots & 70+ constructed homes in a fully developed community.",
     overview:
@@ -90,7 +85,7 @@ export const VENTURES: Venture[] = [
     launch: "08 May 2022",
     location: "Kankipadu, Vijayawada",
     image: ventureKankipaduImg,
-    videoUrl: videoKankipadu.url,
+    videoUrl: "/videos/kankipadu.mp4",
     brochureUrl: brochureKankipadu.url,
     tagline: "An 85-acre lakefront township with Lotus, Duplex & Luxury Villas.",
     overview:
@@ -127,7 +122,7 @@ export const VENTURES: Venture[] = [
     status: "Ongoing Project",
     location: "Vuyyuru",
     image: ventureVuyyuruImg,
-    videoUrl: videoVuyyuru.url,
+    videoUrl: "/videos/vuyyuru.mp4",
     tagline: "A signature ongoing project of luxury row houses & wellness parks.",
     overview:
       "Royal Millennia introduces a majestic grand entrance, cycling tracks, luxury row houses and dedicated sports, kids and yoga parks — a premium address designed for wellness-driven modern living.",
@@ -151,7 +146,7 @@ export const VENTURES: Venture[] = [
     availability: "Few Plots Available",
     location: "Penamaluru, Vijayawada",
     image: venturePenamaluruImg,
-    videoUrl: videoPenamaluru.url,
+    videoUrl: "/videos/penamaluru.mp4",
     tagline: "The next SRR landmark — a future investment opportunity.",
     overview:
       "An upcoming flagship community at Penamaluru. Register your interest early to secure priority allotment and pre-launch pricing on our most anticipated venture yet.",
@@ -172,7 +167,7 @@ export const VENTURES: Venture[] = [
     availability: "Few Plots Available",
     location: "Ramavarapadu, Vijayawada",
     image: ventureRamavarapaduImg,
-    videoUrl: videoRamavarapadu.url,
+    videoUrl: "/videos/ramavarapadu.mp4",
     tagline: "A rare address at Ramavarapadu — limited premium plots remaining.",
     overview:
       "SRR Ramavarapadu is a boutique gated community at one of Vijayawada's fastest-growing corridors. With wide CC roads, underground utilities, landscaped avenues and a curated amenity core, it is designed as a future-ready lifestyle address. Only a handful of premium plots remain — reserve yours before the final release.",
