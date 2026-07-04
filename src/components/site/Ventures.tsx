@@ -42,9 +42,11 @@ export function Ventures() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#050f1a] via-[#050f1a]/40 to-transparent" />
                   <div className="absolute left-4 top-4 flex flex-col items-start gap-2">
-                    <span className={`rounded-full border px-3 py-1 text-[10px] tracking-[0.25em] uppercase ${statusColor[v.status]}`}>
-                      {v.status}
-                    </span>
+                    {!(v.status === "Upcoming" && v.availability) && (
+                      <span className={`rounded-full border px-3 py-1 text-[10px] tracking-[0.25em] uppercase ${statusColor[v.status]}`}>
+                        {v.status}
+                      </span>
+                    )}
                     {v.availability && (
                       <span className="rounded-full border border-[#D4AF37]/50 bg-[#D4AF37]/15 px-3 py-1 text-[10px] tracking-[0.25em] uppercase text-[#F4D67A]">
                         {v.availability}
