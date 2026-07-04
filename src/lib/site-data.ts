@@ -4,12 +4,12 @@ import ventureNunnaImg from "@/assets/venture-nunna.jpg";
 import ventureKankipaduImg from "@/assets/venture-kankipadu.jpg";
 import ventureVuyyuruImg from "@/assets/venture-vuyyuru.jpg";
 import venturePenamaluruImg from "@/assets/venture-penamaluru.jpg";
-import ventureRamarapaduImg from "@/assets/venture-ramarapadu.jpg";
+import ventureRamavarapaduImg from "@/assets/venture-ramarapadu.jpg";
 import videoNunna from "@/assets/video-nunna.asset.json";
 import videoKankipadu from "@/assets/video-kankipadu.asset.json";
 import videoVuyyuru from "@/assets/video-vuyyuru.asset.json";
 import videoPenamaluru from "@/assets/video-penamaluru.asset.json";
-import videoRamarapadu from "@/assets/video-ramarapadu.asset.json";
+import videoRamavarapadu from "@/assets/video-ramarapadu.asset.json";
 
 export const COMPANY = {
   name: "SRR GROUP",
@@ -165,20 +165,20 @@ export const VENTURES: Venture[] = [
     amenities: ["Clubhouse", "Swimming Pool", "Sports Park", "Landscaped Gardens"],
   },
   {
-    slug: "ramarapadu",
-    name: "SRR Ramarapadu",
+    slug: "ramavarapadu",
+    name: "SRR Ramavarapadu",
     subtitle: "Premium Gated Plotted Community",
     status: "Few Plots Available",
     availability: "Few Plots Available",
-    location: "Ramaravarapadu, Vijayawada",
-    image: ventureRamarapaduImg,
-    videoUrl: videoRamarapadu.url,
-    tagline: "A rare address at Ramaravarapadu — limited premium plots remaining.",
+    location: "Ramavarapadu, Vijayawada",
+    image: ventureRamavarapaduImg,
+    videoUrl: videoRamavarapadu.url,
+    tagline: "A rare address at Ramavarapadu — limited premium plots remaining.",
     overview:
-      "SRR Ramarapadu is a boutique gated community at one of Vijayawada's fastest-growing corridors. With wide CC roads, underground utilities, landscaped avenues and a curated amenity core, it is designed as a future-ready lifestyle address. Only a handful of premium plots remain — reserve yours before the final release.",
+      "SRR Ramavarapadu is a boutique gated community at one of Vijayawada's fastest-growing corridors. With wide CC roads, underground utilities, landscaped avenues and a curated amenity core, it is designed as a future-ready lifestyle address. Only a handful of premium plots remain — reserve yours before the final release.",
     highlights: [
       "Few Plots Available",
-      "Prime Ramaravarapadu Location",
+      "Prime Ramavarapadu Location",
       "Wide CC Roads",
       "Underground Drainage & Electricity",
       "Water Pipeline",
