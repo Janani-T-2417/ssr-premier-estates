@@ -112,6 +112,38 @@ export default function VenturePage() {
         </div>
       </section>
 
+      {/* Cinematic Video */}
+      {v.videoUrl && (
+        <section className="section-y">
+          <div className="mx-auto max-w-7xl px-4">
+            <Reveal>
+              <div className="mb-6 text-center">
+                <p className="text-[11px] tracking-[0.4em] text-[#F4D67A]/80">CINEMATIC WALKTHROUGH</p>
+                <h2 className="mt-3 font-display text-3xl sm:text-4xl md:text-5xl">
+                  Experience <span className="text-gold-gradient">{v.name.split(" — ")[0]}</span>
+                </h2>
+              </div>
+            </Reveal>
+            <Reveal delay={0.1}>
+              <div className="relative overflow-hidden rounded-3xl gold-border shadow-[0_30px_80px_-30px_rgba(212,175,55,0.35)]">
+                <video
+                  key={v.slug}
+                  src={v.videoUrl}
+                  poster={v.image}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
+                  className="aspect-video h-full w-full object-cover animate-in fade-in duration-1000"
+                />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#050f1a]/50 via-transparent to-[#050f1a]/20" />
+              </div>
+            </Reveal>
+          </div>
+        </section>
+      )}
+
       {/* Overview + Highlights */}
       <section className="section-y">
         <div className="mx-auto grid max-w-7xl gap-12 px-4 lg:grid-cols-2">
