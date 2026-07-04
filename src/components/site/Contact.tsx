@@ -31,7 +31,7 @@ export function Contact() {
           <Reveal delay={0.1}>
             <div className="overflow-hidden rounded-3xl gold-border">
               <iframe
-                title="SSR Group office location"
+                title="SRR Group office location"
                 src={COMPANY.mapEmbed}
                 className="h-[420px] w-full bg-[#0b1e33]"
                 loading="lazy"

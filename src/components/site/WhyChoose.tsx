@@ -17,7 +17,7 @@ export function WhyChoose() {
       <div className="mx-auto max-w-7xl px-4">
         <div className="mx-auto max-w-3xl text-center">
           <Reveal>
-            <p className="text-[11px] tracking-[0.4em] text-[#F4D67A]/80">WHY CHOOSE SSR GROUP</p>
+            <p className="text-[11px] tracking-[0.4em] text-[#F4D67A]/80">WHY CHOOSE SRR GROUP</p>
             <h2 className="mt-3 font-display text-4xl sm:text-5xl md:text-6xl">
               Seven reasons <span className="text-gold-gradient">discerning families</span> choose us.
             </h2>

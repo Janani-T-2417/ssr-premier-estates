@@ -38,7 +38,7 @@ export function Amenities() {
               A lifestyle of <span className="text-gold-gradient">effortless luxury.</span>
             </h2>
             <p className="mt-4 text-white/70">
-              Every SSR community is curated with signature amenities that
+              Every SRR community is curated with signature amenities that
               transform daily life into an everyday celebration.
             </p>
           </Reveal>

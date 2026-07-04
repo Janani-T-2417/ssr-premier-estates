@@ -10,9 +10,9 @@ export function Footer() {
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-16 md:grid-cols-4">
         <div className="md:col-span-2">
           <div className="flex items-center gap-3">
-            <img src={logo} alt="SSR Group" width={56} height={56} className="h-14 w-14 rounded-full ring-1 ring-[#D4AF37]/60" />
+            <img src={logo} alt="SRR Group" width={56} height={56} className="h-14 w-14 rounded-full ring-1 ring-[#D4AF37]/60" />
             <div>
-              <div className="font-display text-2xl font-bold text-gold-gradient">SSR GROUP</div>
+              <div className="font-display text-2xl font-bold text-gold-gradient">SRR GROUP</div>
               <div className="text-xs tracking-[0.25em] text-muted-foreground">YOUR DREAMS COMES TRUE WITH US</div>
             </div>
           </div>
@@ -36,7 +36,7 @@ export function Footer() {
           <ul className="space-y-2 text-sm text-white/70">
             {VENTURES.map((v) => (
               <li key={v.slug}>
-                <Link to="/ventures/$slug" params={{ slug: v.slug }} className="hover:text-[#F4D67A]">
+                <Link to={`/ventures/${v.slug}`} className="hover:text-[#F4D67A]">
                   {v.name}
                 </Link>
               </li>
@@ -55,7 +55,7 @@ export function Footer() {
       </div>
       <div className="gold-divider" />
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-4 py-6 text-xs text-white/50 sm:flex-row">
-        <p>© {new Date().getFullYear()} SSR Group. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} SRR Group. All rights reserved.</p>
         <p>Crafted with precision · Luxury Real Estate</p>
       </div>
     </footer>

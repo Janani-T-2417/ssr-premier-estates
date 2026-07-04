@@ -60,7 +60,7 @@ export function Gallery() {
           <Reveal>
             <p className="text-[11px] tracking-[0.4em] text-[#F4D67A]/80">GALLERY</p>
             <h2 className="mt-3 font-display text-4xl sm:text-5xl md:text-6xl">
-              A glimpse of <span className="text-gold-gradient">SSR living.</span>
+              A glimpse of <span className="text-gold-gradient">SRR living.</span>
             </h2>
           </Reveal>
         </div>

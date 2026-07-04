@@ -8,9 +8,9 @@ export default function VenturesIndex() {
   return (
     <>
       <Helmet>
-        <title>Ventures — Luxury Communities by SSR Group</title>
-        <meta name="description" content="Explore SSR Group's signature ventures: SSR Nunna, Royal Imperia Kankipadu, Royal Millennia Vuyyuru and SSR Penamaluru." />
-        <meta property="og:title" content="SSR Group Ventures" />
+        <title>Ventures — Luxury Communities by SRR Group</title>
+        <meta name="description" content="Explore SRR Group's signature ventures: SRR Nunna, Royal Imperia Kankipadu, Royal Millennia Vuyyuru and SRR Penamaluru." />
+        <meta property="og:title" content="SRR Group Ventures" />
         <meta property="og:description" content="A collection of signature luxury addresses across Andhra Pradesh." />
       </Helmet>
       <PageShell>

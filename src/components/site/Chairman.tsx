@@ -11,7 +11,7 @@ export function Chairman() {
           <div className="relative overflow-hidden rounded-3xl gold-border gold-glow w-full max-w-[450px] sm:max-w-[380px] md:max-w-[420px] lg:max-w-[450px] mx-auto shadow-xl group transition-transform duration-500">
             <img
               src={chairman}
-              alt="Chairman, SSR Group"
+              alt="Chairman, SRR Group"
               width={450}
               height={550}
               loading="lazy"
@@ -19,7 +19,7 @@ export function Chairman() {
             />
             <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#050f1a] via-[#050f1a]/60 to-transparent p-6">
               <div className="font-display text-2xl text-gold-gradient">Sri Siva Raghava</div>
-              <div className="text-xs tracking-[0.3em] text-white/70 uppercase">Chairman · SSR Group</div>
+              <div className="text-xs tracking-[0.3em] text-white/70 uppercase">Chairman · SRR Group</div>
             </div>
           </div>
         </Reveal>
@@ -36,7 +36,7 @@ export function Chairman() {
             <div className="mt-8 rounded-3xl glass gold-border p-8">
               <Quote className="h-8 w-8 text-[#D4AF37]" />
               <p className="mt-4 text-lg leading-relaxed text-white/85">
-                "At SSR Group, we don't just develop land — we craft
+                "At SRR Group, we don't just develop land — we craft
                 landmarks. Every venture we deliver reflects our belief that
                 luxury is a promise: a promise of design, of quality, of trust
                 and of a lifetime of memories for the families who call our

@@ -8,9 +8,9 @@ export default function Contact() {
   return (
     <>
       <Helmet>
-        <title>Contact SSR Group — Vijayawada Sales Office</title>
-        <meta name="description" content="Get in touch with SSR Group in Vijayawada. Book a private site visit, request a brochure or speak with our sales team." />
-        <meta property="og:title" content="Contact SSR Group" />
+        <title>Contact SRR Group — Vijayawada Sales Office</title>
+        <meta name="description" content="Get in touch with SRR Group in Vijayawada. Book a private site visit, request a brochure or speak with our sales team." />
+        <meta property="og:title" content="Contact SRR Group" />
         <meta property="og:description" content="Book a private site visit with our sales team." />
       </Helmet>
       <PageShell>

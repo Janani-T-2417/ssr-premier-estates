@@ -7,9 +7,9 @@ export default function Chairman() {
   return (
     <>
       <Helmet>
-        <title>Chairman — Sri Siva Raghava · SSR Group</title>
-        <meta name="description" content="Meet Sri Siva Raghava, Chairman of SSR Group — leading a legacy of trust, quality and premium real estate." />
-        <meta property="og:title" content="Chairman — SSR Group" />
+        <title>Chairman — Sri Siva Raghava · SRR Group</title>
+        <meta name="description" content="Meet Sri Siva Raghava, Chairman of SRR Group — leading a legacy of trust, quality and premium real estate." />
+        <meta property="og:title" content="Chairman — SRR Group" />
         <meta property="og:description" content="A visionary leader crafting landmark luxury communities." />
       </Helmet>
       <PageShell>
@@ -17,7 +17,7 @@ export default function Chairman() {
           eyebrow="LEADERSHIP"
           title="Meet our"
           highlight="Chairman."
-          subtitle="The visionary behind every SSR landmark — driving a legacy of trust, uncompromising quality and cinematic luxury."
+          subtitle="The visionary behind every SRR landmark — driving a legacy of trust, uncompromising quality and cinematic luxury."
           image={hero}
         />
         <ChairmanSection />

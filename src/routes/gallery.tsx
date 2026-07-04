@@ -7,16 +7,16 @@ export default function Gallery() {
   return (
     <>
       <Helmet>
-        <title>Gallery — Inside SSR Group Luxury Communities</title>
-        <meta name="description" content="Explore the SSR Group gallery: villas, amenities, landscapes and interiors from our signature ventures." />
-        <meta property="og:title" content="SSR Group Gallery" />
-        <meta property="og:description" content="A cinematic glimpse of SSR living." />
+        <title>Gallery — Inside SRR Group Luxury Communities</title>
+        <meta name="description" content="Explore the SRR Group gallery: villas, amenities, landscapes and interiors from our signature ventures." />
+        <meta property="og:title" content="SRR Group Gallery" />
+        <meta property="og:description" content="A cinematic glimpse of SRR living." />
       </Helmet>
       <PageShell>
         <PageHero
           eyebrow="GALLERY"
           title="A glimpse of"
-          highlight="SSR living."
+          highlight="SRR living."
           subtitle="Cinematic frames from our master-planned communities — villas, amenities, landscapes and interiors."
           image={hero}
         />

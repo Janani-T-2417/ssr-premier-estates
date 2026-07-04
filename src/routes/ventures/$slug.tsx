@@ -35,16 +35,16 @@ export default function VenturePage() {
       </div>
     );
   }
-  const wa = buildWhatsAppUrl(`Hello SSR GROUP, I'm interested in ${v.name}. Please share more details.`);
+  const wa = buildWhatsAppUrl(`Hello SRR GROUP, I'm interested in ${v.name}. Please share more details.`);
   const others = VENTURES.filter((x) => x.slug !== v.slug);
   const mapQuery = encodeURIComponent(`${v.name}, ${v.location}`);
 
   return (
     <PageShell>
       <Helmet>
-        <title>{v.name} — SSR GROUP</title>
+        <title>{v.name} — SRR GROUP</title>
         <meta name="description" content={v.tagline} />
-        <meta property="og:title" content={`${v.name} — SSR GROUP`} />
+        <meta property="og:title" content={`${v.name} — SRR GROUP`} />
         <meta property="og:description" content={v.tagline} />
         <meta property="og:image" content={v.image} />
         <meta property="og:type" content="article" />
@@ -63,9 +63,16 @@ export default function VenturePage() {
 
           <div className="mt-6 grid gap-8 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] lg:items-end">
             <div>
-              <span className="inline-block rounded-full glass gold-border px-3 py-1 text-[10px] tracking-[0.3em] text-[#F4D67A] uppercase">
-                {v.status}
-              </span>
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="inline-block rounded-full glass gold-border px-3 py-1 text-[10px] tracking-[0.3em] text-[#F4D67A] uppercase">
+                  {v.status}
+                </span>
+                {v.availability && (
+                  <span className="inline-block rounded-full border border-[#D4AF37]/50 bg-[#D4AF37]/15 px-3 py-1 text-[10px] tracking-[0.3em] text-[#F4D67A] uppercase">
+                    {v.availability}
+                  </span>
+                )}
+              </div>
               <h1 className="mt-4 font-display text-5xl leading-[1.05] sm:text-6xl md:text-7xl">
                 <span className="text-gold-gradient">{v.name.split(" — ")[0]}</span>
                 {v.name.includes(" — ") && <span className="block text-white/95">{v.name.split(" — ")[1]}</span>}
@@ -104,6 +111,38 @@ export default function VenturePage() {
           </div>
         </div>
       </section>
+
+      {/* Cinematic Video */}
+      {v.videoUrl && (
+        <section className="section-y">
+          <div className="mx-auto max-w-7xl px-4">
+            <Reveal>
+              <div className="mb-6 text-center">
+                <p className="text-[11px] tracking-[0.4em] text-[#F4D67A]/80">CINEMATIC WALKTHROUGH</p>
+                <h2 className="mt-3 font-display text-3xl sm:text-4xl md:text-5xl">
+                  Experience <span className="text-gold-gradient">{v.name.split(" — ")[0]}</span>
+                </h2>
+              </div>
+            </Reveal>
+            <Reveal delay={0.1}>
+              <div className="relative overflow-hidden rounded-3xl gold-border shadow-[0_30px_80px_-30px_rgba(212,175,55,0.35)]">
+                <video
+                  key={v.slug}
+                  src={v.videoUrl}
+                  poster={v.image}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
+                  className="aspect-video h-full w-full object-cover animate-in fade-in duration-1000"
+                />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#050f1a]/50 via-transparent to-[#050f1a]/20" />
+              </div>
+            </Reveal>
+          </div>
+        </section>
+      )}
 
       {/* Overview + Highlights */}
       <section className="section-y">
@@ -245,7 +284,7 @@ export default function VenturePage() {
         <div className="mx-auto max-w-7xl px-4">
           <Reveal>
             <p className="text-[11px] tracking-[0.4em] text-[#F4D67A]/80">EXPLORE MORE</p>
-            <h2 className="mt-3 font-display text-3xl sm:text-4xl md:text-5xl">Other <span className="text-gold-gradient">SSR ventures.</span></h2>
+            <h2 className="mt-3 font-display text-3xl sm:text-4xl md:text-5xl">Other <span className="text-gold-gradient">SRR ventures.</span></h2>
           </Reveal>
           <div className="mt-8 grid gap-6 md:grid-cols-3">
             {others.map((o) => (
