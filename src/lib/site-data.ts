@@ -33,10 +33,17 @@ export type Venture = {
   slug: string;
   name: string;
   subtitle?: string;
-  status: "Completed" | "Ongoing" | "Upcoming";
+  status:
+    | "Completed"
+    | "Fully Completed"
+    | "Ongoing Project"
+    | "Upcoming"
+    | "Few Plots Available";
+  availability?: string;
   launch?: string;
   location: string;
   image: string;
+  videoUrl?: string;
   brochureUrl?: string;
   tagline: string;
   overview: string;
@@ -51,9 +58,11 @@ export const VENTURES: Venture[] = [
     name: "SRR Nunna",
     subtitle: "Premium Plots & Luxury Homes",
     status: "Completed",
+    availability: "Resell Available",
     launch: "03 April 2022",
     location: "Nunna, Vijayawada",
     image: ventureNunnaImg,
+    videoUrl: videoNunna.url,
     brochureUrl: brochureNunna.url,
     tagline: "350+ premium plots & 70+ constructed homes in a fully developed community.",
     overview:
