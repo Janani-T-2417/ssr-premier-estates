@@ -36,7 +36,7 @@ export function Footer() {
           <ul className="space-y-2 text-sm text-white/70">
             {VENTURES.map((v) => (
               <li key={v.slug}>
-                <Link to="/ventures/$slug" params={{ slug: v.slug }} className="hover:text-[#F4D67A]">
+                <Link to={`/ventures/${v.slug}`} className="hover:text-[#F4D67A]">
                   {v.name}
                 </Link>
               </li>
